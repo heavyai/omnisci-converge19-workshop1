@@ -1,0 +1,43 @@
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.main-container {
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.chart-container {
+  width: 50%;
+  height: 50%;
+}
+
+.chart {
+  height: 100%;
+  width: 100%;
+}
+
+.title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.mapd {
+  position: relative;
+  top: 2px;
+}
+
+.data-count {
+  padding-right: 20px;
+}
+
+.filter-count {
+  font-weight: bold;
+  color: #45b1e8;
+}

@@ -1,0 +1,425 @@
+<html>
+  <head>
+    <style type="text/css">
+      table.tableizer-table {
+        font-size: 12px;
+        border: 1px solid #ccc;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .tableizer-table td {
+        padding: 4px;
+        margin: 3px;
+        border: 1px solid #ccc;
+      }
+      .tableizer-table th {
+        background-color: #104e8b;
+        color: #fff;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <table class="tableizer-table">
+      <thead>
+        <tr class="tableizer-firstrow">
+          <th>Column</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>LocalYear</td>
+          <td>SMALLINT</td>
+          <td>Year of sample</td>
+        </tr>
+        <tr>
+          <td>LocalWeek</td>
+          <td>SMALLINT</td>
+          <td>Week of this sample within the year</td>
+        </tr>
+        <tr>
+          <td>Location_Geohash6</td>
+          <td>STR [dict. encode]</td>
+          <td>
+            The device reporting geohash based on the reported latitude and
+            longitude by the device OS of length 6. Approximately ≤1.22km x
+            0.61km at the equator.
+          </td>
+        </tr>
+        <tr>
+          <td>Latitude_Center</td>
+          <td>FLOAT</td>
+          <td>Center latitude of this sample</td>
+        </tr>
+        <tr>
+          <td>Longitude_Center</td>
+          <td>FLOAT</td>
+          <td>Center longitude of this sample</td>
+        </tr>
+        <tr>
+          <td>Location_City</td>
+          <td>STR [dict. encode]</td>
+          <td>Center city where this sample is from</td>
+        </tr>
+        <tr>
+          <td>Connection_Category</td>
+          <td>STR [dict. encode]</td>
+          <td>
+            Determined by the connection type and the mobile connection
+            technology. Typical values: 3G, 4G
+          </td>
+        </tr>
+        <tr>
+          <td>Device_SIMServiceProviderBrandName</td>
+          <td>STR [dict. encode]</td>
+          <td>Service provider</td>
+        </tr>
+        <tr>
+          <td>Average_DownloadThroughput</td>
+          <td>FLOAT</td>
+          <td>Average download speed throughout this sample period</td>
+        </tr>
+        <tr>
+          <td>Median_DownloadThroughput</td>
+          <td>FLOAT</td>
+          <td>Median download speed throughout this sample period</td>
+        </tr>
+        <tr>
+          <td>Maximum_DownloadThroughput</td>
+          <td>FLOAT</td>
+          <td>Maximum download speed throughout this sample period</td>
+        </tr>
+        <tr>
+          <td>Minimum_DownloadThroughput</td>
+          <td>FLOAT</td>
+          <td>Minimum download speed throughout this sample period</td>
+        </tr>
+        <tr>
+          <td>Count_DownloadThroughput</td>
+          <td>INT</td>
+          <td>The number of downloads counted in this sample period</td>
+        </tr>
+        <tr>
+          <td>Average_UploadThroughput</td>
+          <td>FLOAT</td>
+          <td>Average upload speed throughout this sample period</td>
+        </tr>
+        <tr>
+          <td>Median_UploadThroughput</td>
+          <td>FLOAT</td>
+          <td>Median upload speed throughout this sample period</td>
+        </tr>
+        <tr>
+          <td>Maximum_UploadThroughput</td>
+          <td>FLOAT</td>
+          <td>Maximum upload speed throughout this sample period</td>
+        </tr>
+        <tr>
+          <td>Minimum_UploadThroughput</td>
+          <td>FLOAT</td>
+          <td>Minimum upload speed throughout this sample period</td>
+        </tr>
+        <tr>
+          <td>Count_UploadThroughput</td>
+          <td>INT</td>
+          <td>The number of uploads counted in this sample period</td>
+        </tr>
+        <tr>
+          <td>Average_Latency</td>
+          <td>FLOAT</td>
+          <td>Average measured latency throughout this sample period</td>
+        </tr>
+        <tr>
+          <td>Median_Latency</td>
+          <td>FLOAT</td>
+          <td>Median measured latency throughout this sample period</td>
+        </tr>
+        <tr>
+          <td>Maximum_Latency</td>
+          <td>FLOAT</td>
+          <td>Maximum measured latency throughout this sample period</td>
+        </tr>
+        <tr>
+          <td>Minimum_Latency</td>
+          <td>FLOAT</td>
+          <td>Minimum measured latency throughout this sample period</td>
+        </tr>
+        <tr>
+          <td>Count_Latency</td>
+          <td>INT</td>
+          <td>The number of latency samples counted in this sample period</td>
+        </tr>
+        <tr>
+          <td>Average_Jitter</td>
+          <td>FLOAT</td>
+          <td>
+            The average measured jitter, or packet delay variation, on the
+            current wireless connection
+          </td>
+        </tr>
+        <tr>
+          <td>Median_Jitter</td>
+          <td>FLOAT</td>
+          <td>
+            The median measured jitter, or packet delay variation, on the
+            current wireless connection
+          </td>
+        </tr>
+        <tr>
+          <td>Maximum_Jitter</td>
+          <td>FLOAT</td>
+          <td>
+            The maximum measured jitter, or packet delay variation, on the
+            current wireless connection
+          </td>
+        </tr>
+        <tr>
+          <td>Minimum_Jitter</td>
+          <td>FLOAT</td>
+          <td>
+            The minimum measured jitter, or packet delay variation, on the
+            current wireless connection
+          </td>
+        </tr>
+        <tr>
+          <td>Count_Jitter</td>
+          <td>INT</td>
+          <td>
+            The count of variation in the latency on a packet flow between two
+            systems
+          </td>
+        </tr>
+        <tr>
+          <td>Average_PacketLoss</td>
+          <td>FLOAT</td>
+          <td>
+            The average measured packet loss on the current wireless connection
+          </td>
+        </tr>
+        <tr>
+          <td>Median_PacketLoss</td>
+          <td>FLOAT</td>
+          <td>
+            The median measured packet loss on the current wireless connection
+          </td>
+        </tr>
+        <tr>
+          <td>Maximum_PacketLoss</td>
+          <td>FLOAT</td>
+          <td>
+            The maximum measured packet loss on the current wireless connection
+          </td>
+        </tr>
+        <tr>
+          <td>Minimum_PacketLoss</td>
+          <td>FLOAT</td>
+          <td>
+            The minimum measured packet loss on the current wireless connection
+          </td>
+        </tr>
+        <tr>
+          <td>Count_PacketLoss</td>
+          <td>INT</td>
+          <td>
+            The number of measured packet loss on the current wireless
+            connection
+          </td>
+        </tr>
+        <tr>
+          <td>Average_SignalStrength</td>
+          <td>FLOAT</td>
+          <td>Average signal strength throughout this sample period</td>
+        </tr>
+        <tr>
+          <td>Median_SignalStrength</td>
+          <td>FLOAT</td>
+          <td>Median signal strength throughout this sample period</td>
+        </tr>
+        <tr>
+          <td>Maximum_SignalStrength</td>
+          <td>FLOAT</td>
+          <td>Maximum signal strength throughout this sample period</td>
+        </tr>
+        <tr>
+          <td>Minimum_SignalStrength</td>
+          <td>FLOAT</td>
+          <td>Minimum signal strength throughout this sample period</td>
+        </tr>
+        <tr>
+          <td>Count_SignalStrength</td>
+          <td>INT</td>
+          <td>
+            The number of signal strength samples counted in this sample period
+          </td>
+        </tr>
+        <tr>
+          <td>Average_RSSNR</td>
+          <td>FLOAT</td>
+          <td>
+            The average Reference Signal Signal to Noise Ratio - the ratio of
+            the desired signal to the background noise
+          </td>
+        </tr>
+        <tr>
+          <td>Median_RSSNR</td>
+          <td>FLOAT</td>
+          <td>
+            The median Reference Signal Signal to Noise Ratio - the ratio of the
+            desired signal to the background noise
+          </td>
+        </tr>
+        <tr>
+          <td>Maximum_RSSNR</td>
+          <td>FLOAT</td>
+          <td>
+            The maximum Reference Signal Signal to Noise Ratio - the ratio of
+            the desired signal to the background noise
+          </td>
+        </tr>
+        <tr>
+          <td>Minimum_RSSNR</td>
+          <td>FLOAT</td>
+          <td>
+            The minimum Reference Signal Signal to Noise Ratio - the ratio of
+            the desired signal to the background noise
+          </td>
+        </tr>
+        <tr>
+          <td>Count_RSSNR</td>
+          <td>INT</td>
+          <td>
+            The count of Reference Signal Signal to Noise Ratio - the ratio of
+            the desired signal to the background noise
+          </td>
+        </tr>
+        <tr>
+          <td>Average_CQI</td>
+          <td>FLOAT</td>
+          <td>
+            The average Channel Quality Indicator - indicates how good or bad
+            the communication channel is between the device and the mobile base
+            station
+          </td>
+        </tr>
+        <tr>
+          <td>Median_CQI</td>
+          <td>FLOAT</td>
+          <td>
+            The median Channel Quality Indicator - indicates how good or bad the
+            communication channel is between the device and the mobile base
+            station
+          </td>
+        </tr>
+        <tr>
+          <td>Maximum_CQI</td>
+          <td>FLOAT</td>
+          <td>
+            The maximum Channel Quality Indicator - indicates how good or bad
+            the communication channel is between the device and the mobile base
+            station
+          </td>
+        </tr>
+        <tr>
+          <td>Minimum_CQI</td>
+          <td>FLOAT</td>
+          <td>
+            The minimum Channel Quality Indicator - indicates how good or bad
+            the communication channel is between the device and the mobile base
+            station
+          </td>
+        </tr>
+        <tr>
+          <td>Count_CQI</td>
+          <td>INT</td>
+          <td>
+            The count of Channel Quality Indicator - indicates how good or bad
+            the communication channel is between the device and the mobile base
+            station
+          </td>
+        </tr>
+        <tr>
+          <td>Average_RSRQ</td>
+          <td>FLOAT</td>
+          <td>
+            The average Reference Signal Received Quality - value represents the
+            ratio of RSRP to RSSI (Received Signal Strength Indicator)
+          </td>
+        </tr>
+        <tr>
+          <td>Median_RSRQ</td>
+          <td>FLOAT</td>
+          <td>
+            The median Reference Signal Received Quality - value represents the
+            ratio of RSRP to RSSI
+          </td>
+        </tr>
+        <tr>
+          <td>Maximum_RSRQ</td>
+          <td>FLOAT</td>
+          <td>
+            The maximum Reference Signal Received Quality - value represents the
+            ratio of RSRP to RSSI
+          </td>
+        </tr>
+        <tr>
+          <td>Minimum_RSRQ</td>
+          <td>FLOAT</td>
+          <td>
+            The minimum Reference Signal Received Quality - value represents the
+            ratio of RSRP to RSSI
+          </td>
+        </tr>
+        <tr>
+          <td>Count_RSRQ</td>
+          <td>INT</td>
+          <td>
+            The count of Reference Signal Received Quality - value represents
+            the ratio of RSRP to RSSI
+          </td>
+        </tr>
+        <tr>
+          <td>Number_of_Records</td>
+          <td>BIGINT</td>
+          <td>
+            Total number of records available in any specified matched field
+          </td>
+        </tr>
+        <tr>
+          <td>SUM_ReceivedBytes</td>
+          <td>BIGINT</td>
+          <td>
+            Total amount of data received by this handset, in bytes, over this
+            sample period
+          </td>
+        </tr>
+        <tr>
+          <td>SUM_TransmittedBytes</td>
+          <td>BIGINT</td>
+          <td>
+            Total amount of data transmitted by this handset, in bytes, over
+            this sample period
+          </td>
+        </tr>
+        <tr>
+          <td>UniqueCount_DeviceUID</td>
+          <td>INT</td>
+          <td>The count of unique device ID numbers included in the table</td>
+        </tr>
+        <tr>
+          <td>ConsistentQualityExcellent</td>
+          <td>FLOAT</td>
+          <td>
+            A connection metric that exceeds all five excellent quality KPI
+            thresholds for high demand use-cases
+          </td>
+        </tr>
+        <tr>
+          <td>ConsistentQualityBasic</td>
+          <td>FLOAT</td>
+          <td>A connection metric with less demanding target use-cases</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
